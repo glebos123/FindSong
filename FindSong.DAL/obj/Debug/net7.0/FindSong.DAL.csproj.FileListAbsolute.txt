@@ -1,0 +1,17 @@
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\bin\Debug\net7.0\FindSong.DAL.deps.json
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\bin\Debug\net7.0\FindSong.DAL.runtimeconfig.json
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\bin\Debug\net7.0\FindSong.DAL.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\bin\Debug\net7.0\FindSong.DAL.pdb
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\bin\Debug\net7.0\FindSong.Domain.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\bin\Debug\net7.0\FindSong.Domain.pdb
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.csproj.AssemblyReference.cache
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.AssemblyInfoInputs.cache
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.AssemblyInfo.cs
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.csproj.CopyComplete
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\refint\FindSong.DAL.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.pdb
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\FindSong.DAL.genruntimeconfig.cache
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.DAL\obj\Debug\net7.0\ref\FindSong.DAL.dll
