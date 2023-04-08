@@ -8,7 +8,7 @@ const spotifyApi = new SpotifyWebApi({
     clientId: "5a87b8656f2a470bb12590d2c59fea05",
 })
 interface ISearch{
-    code: string
+    code: string | null
 }
 
 export const Search: FC<ISearch> = React.memo((
@@ -20,11 +20,8 @@ export const Search: FC<ISearch> = React.memo((
     const accessToken = useAuth(code)
     const [search, setSearch] = useState("")
     const [searchResults, setSearchResults] = useState<Array<any>>([])
-
-    function chooseTrack(track: any) {
-        setSearch("")
-    }
-
+    
+    
     useEffect(() => {
         if (!accessToken) return
         spotifyApi.setAccessToken(accessToken)
@@ -36,7 +33,7 @@ export const Search: FC<ISearch> = React.memo((
 
         
         spotifyApi.searchTracks(search).then(res => {
-           console.log(res);
+           
            if (res.body.tracks == undefined){
                return
            }
@@ -67,7 +64,7 @@ export const Search: FC<ISearch> = React.memo((
         <Container className="d-flex flex-column py-2" style={{ height: "100vh" }}>
             <Form.Control
                 type="search"
-                placeholder="Search Songs/Artists"
+                placeholder="Search Songs"
                 value={search}
                 onChange={e => setSearch(e.target.value)}
             />
@@ -76,7 +73,6 @@ export const Search: FC<ISearch> = React.memo((
                     <TrackSearchResult
                         track={track}
                         key={track.uri}
-                        chooseTrack={chooseTrack}
                     />
                 ))}
             </div>

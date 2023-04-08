@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from "react"
 import axios from "axios"
 
-export default function useAuth(code: string) {
+export default function useAuth(code: string | null) {
     const [accessToken, setAccessToken] = useState()
         
     useEffect(() => {
