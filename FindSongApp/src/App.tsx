@@ -5,15 +5,25 @@ import Login from "./components/Login";
 import {Search} from "./components/Search";
 import {Route, Routes} from "react-router-dom";
 import {Song} from "./components/Song";
+import {Container} from "react-bootstrap";
 
 
-const code = new URLSearchParams(window.location.search).get("code");
+
 
 function App() {
-    return <Routes>
-        <Route element={<Song/>} path={"/Song"} />
-        code ? <Route element={<Search code={code} />} path={'/'} /> : <Route element={<Login/>} path={'/'} />
-    </Routes>
+    const [song, setSong] = useState("");
+    return(
+        <Container>
+            <Routes>
+                <Route element={<Song song={song} setSong={setSong}/>}  path={"/Song"} />
+                <Route element={<Search  setSong={setSong} />} path={'/Search'} /> 
+                <Route element={<Login/>} path={'/'} />  
+          
+               
+            </Routes>
+            
+        </Container>
+       )
     
     
     

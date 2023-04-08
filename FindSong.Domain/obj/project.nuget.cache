@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "K/ZmjtKa4lzPObBzNh+S+v4YQRAAMhRFB9I5wkxiZpV60TSGzyJD6MxAeQQ5I+VPmyTNbmWUZh8HxwCzj0zxdw==",
+  "dgSpecHash": "YMH1KIFFJh6jYr5G1a2U+ebO99xdKLdL25WvpDCHSlzH1VOm3UGEvVmdLky75UHBtduIpMl/ONSB0lTu2wuJiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
+  "projectFilePath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.zarnitza.tech/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

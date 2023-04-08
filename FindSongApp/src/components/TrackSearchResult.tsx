@@ -1,8 +1,16 @@
-﻿import React, {FC, useState} from "react"
+﻿import React, {Dispatch, FC, useState} from "react"
 import {Song} from "./Song";
+import {Link} from "react-router-dom";
 
 interface ITrackSearchResult{
-    track: any,
+    track: {
+        artist: string,
+        title:string,
+        uri: string,
+        albumUrl: string,
+    },
+
+    setSong : Dispatch<string>
  
 }
 
@@ -11,17 +19,17 @@ interface ITrackSearchResult{
 export const TrackSearchResult: FC<ITrackSearchResult> = React.memo((
     {
         track,
+  
+        setSong
         
 
     }
 ) => {
     
-    const [song, setSong] = useState();
     function toSong() {
         setSong(track.title);
     }
-
-    console.log(song);
+    
     
     return (
         <div 
@@ -33,7 +41,7 @@ export const TrackSearchResult: FC<ITrackSearchResult> = React.memo((
                 <div>{track.title}</div>
                 <div className="text-muted">{track.artist}</div>
             </div>
-            <a onClick={toSong} href={"/Song"}>выбрать</a>
+            <Link onClick={toSong} to={"/Song"}>выбрать</Link>
         </div>
     )
 })

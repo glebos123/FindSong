@@ -1,64 +1,67 @@
-﻿import React, {useState, useEffect, FC} from "react"
+﻿import React, {useState, useEffect, FC, Dispatch} from "react"
 import { Container, Form } from "react-bootstrap"
 import SpotifyWebApi from "spotify-web-api-node"
 import {TrackSearchResult} from "./TrackSearchResult";
 import useAuth from "./useAuth";
+import {useNavigate} from "react-router-dom";
 
 const spotifyApi = new SpotifyWebApi({
     clientId: "5a87b8656f2a470bb12590d2c59fea05",
 })
 interface ISearch{
-    code: string | null
+
+    setSong : Dispatch<string>
 }
 
 export const Search: FC<ISearch> = React.memo((
     {
-        code
+         setSong
     }
     
 ) => {
-    const accessToken = useAuth(code)
     const [search, setSearch] = useState("")
     const [searchResults, setSearchResults] = useState<Array<any>>([])
+    const navigate = useNavigate()
     
     
-    useEffect(() => {
-        if (!accessToken) return
-        spotifyApi.setAccessToken(accessToken)
-    }, [accessToken])
 
     useEffect(() => {
-        if (!search) return setSearchResults([])
-        if (!accessToken) return
+
+        let token = localStorage.getItem("token")
+        if (token !== null && search !== ""){
+            spotifyApi.setAccessToken(token)
+            spotifyApi.searchTracks(search).then(res => {
+                if(res.statusCode !== 200){
+                    localStorage.removeItem("token")
+                    navigate("/")
+                }
+                    
+                if (res.body.tracks == undefined){
+                    return
+                }
+                setSearchResults(
+                   res.body.tracks.items.map(track => {
+                        const smallestAlbumImage = track.album.images.find(
+                            (smallest) => {
+                                return smallest.height === 64 && smallest.width === 64
+                            },
+                           
+                        )
+
+                        return {
+                            artist: track.artists[0].name,
+                            title: track.name,
+                            uri: track.uri,
+                            albumUrl: smallestAlbumImage?.url,
+                        }
+                    })
+                )
+            })
+        }
+     
 
         
-        spotifyApi.searchTracks(search).then(res => {
-           
-           if (res.body.tracks == undefined){
-               return
-           }
-            setSearchResults(
-                res.body.tracks.items.map(track => {
-                    const smallestAlbumImage = track.album.images.reduce(
-                        (smallest, image) => {
-                            //if (image.height < smallest.height) return image
-                            return smallest
-                        },
-                        track.album.images[0]
-                    )
-
-                    return {
-                        artist: track.artists[0].name,
-                        title: track.name,
-                        uri: track.uri,
-                        albumUrl: smallestAlbumImage.url,
-                    }
-                })
-            )
-        })
-
-        
-    }, [search, accessToken])
+    }, [search])
     
     return (
         <Container className="d-flex flex-column py-2" style={{ height: "100vh" }}>
@@ -71,6 +74,7 @@ export const Search: FC<ISearch> = React.memo((
             <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
                 {searchResults.map(track => (
                     <TrackSearchResult
+                        setSong={setSong}
                         track={track}
                         key={track.uri}
                     />
