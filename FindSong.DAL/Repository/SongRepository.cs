@@ -9,9 +9,9 @@ public class SongRepository : IBaseRepository<Song>
     private readonly ApplicationDbContext _db;
     public SongRepository(ApplicationDbContext db) => _db = db;
 
-    public IQueryable<Song> GetAll()
+    public async Task<IQueryable<Song>> GetAll()
     {
-        return _db.Songs;
+        return (await _db.Songs.ToArrayAsync()).AsQueryable();
     }
 
     public async Task<bool> Create(Song entity)

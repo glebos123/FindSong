@@ -8,25 +8,31 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\askich\\.nuget\\packages\\": {}
+    "C:\\Users\\Gleb\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
       "projectName": "FindSong.Domain",
-      "projectPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
-      "packagesPath": "C:\\Users\\askich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
+      "packagesPath": "C:\\Users\\Gleb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\askich\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "http://nuget.zarnitza.tech/nuget": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -60,16 +66,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nuget.zarnitza.tech/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  }
 }

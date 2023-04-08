@@ -1,5 +1,4 @@
-﻿import React, {Dispatch, FC, useState} from "react"
-import {Song} from "./Song";
+﻿import React, {Dispatch, FC} from "react"
 import {Link} from "react-router-dom";
 
 interface ITrackSearchResult{
@@ -9,28 +8,18 @@ interface ITrackSearchResult{
         uri: string,
         albumUrl: string,
     },
-
     setSong : Dispatch<string>
- 
 }
-
-
 
 export const TrackSearchResult: FC<ITrackSearchResult> = React.memo((
     {
         track,
-  
         setSong
-        
-
     }
 ) => {
-    
     function toSong() {
         setSong(track.title);
     }
-    
-    
     return (
         <div 
             className="d-flex justify-content-between m-2 align-items-center"

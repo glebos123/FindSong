@@ -1,37 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj": {}
+    "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj": {
+    "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj",
         "projectName": "FindSong.BLL",
-        "projectPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj",
-        "packagesPath": "C:\\Users\\askich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.BLL\\obj\\",
+        "projectPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.BLL\\FindSong.BLL.csproj",
+        "packagesPath": "C:\\Users\\Gleb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.BLL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\askich\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "http://nuget.zarnitza.tech/nuget": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj": {
-                "projectPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj"
+              "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj": {
+                "projectPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj"
               },
-              "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj": {
-                "projectPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj"
+              "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj": {
+                "projectPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj"
               }
             }
           }
@@ -61,35 +66,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj": {
+    "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj",
         "projectName": "FindSong.DAL",
-        "projectPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj",
-        "packagesPath": "C:\\Users\\askich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.DAL\\FindSong.DAL.csproj",
+        "packagesPath": "C:\\Users\\Gleb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\askich\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "http://nuget.zarnitza.tech/nuget": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj": {
-                "projectPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj"
+              "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj": {
+                "projectPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj"
               }
             }
           }
@@ -135,27 +145,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj": {
+    "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
         "projectName": "FindSong.Domain",
-        "projectPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
-        "packagesPath": "C:\\Users\\askich\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\askich\\Desktop\\FindSong\\FindSong.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\FindSong.Domain.csproj",
+        "packagesPath": "C:\\Users\\Gleb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gleb\\RiderProjects\\FindSong\\FindSong.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\askich\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "http://nuget.zarnitza.tech/nuget": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -189,7 +204,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

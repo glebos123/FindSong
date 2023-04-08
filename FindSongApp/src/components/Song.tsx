@@ -1,8 +1,5 @@
-﻿import React, {useState, useEffect, FC, Dispatch} from "react"
-import { Container, Form } from "react-bootstrap"
-import SpotifyWebApi from "spotify-web-api-node"
-
-
+﻿import React, {FC, Dispatch} from "react"
+import { Container } from "react-bootstrap"
 
 interface ISong{
     song : string,
@@ -11,11 +8,8 @@ interface ISong{
 
 export const Song: FC<ISong> = React.memo((
     {
-        song, setSong
-    }
-
-) => {
-    
+        song
+    }) => {
     return (
         <Container className="d-flex flex-column py-2" style={{ height: "100vh" }}>
             {song}

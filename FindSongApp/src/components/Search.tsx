@@ -2,14 +2,12 @@
 import { Container, Form } from "react-bootstrap"
 import SpotifyWebApi from "spotify-web-api-node"
 import {TrackSearchResult} from "./TrackSearchResult";
-import useAuth from "./useAuth";
 import {useNavigate} from "react-router-dom";
 
 const spotifyApi = new SpotifyWebApi({
     clientId: "5a87b8656f2a470bb12590d2c59fea05",
 })
 interface ISearch{
-
     setSong : Dispatch<string>
 }
 
@@ -23,8 +21,6 @@ export const Search: FC<ISearch> = React.memo((
     const [searchResults, setSearchResults] = useState<Array<any>>([])
     const navigate = useNavigate()
     
-    
-
     useEffect(() => {
 
         let token = localStorage.getItem("token")
@@ -35,7 +31,6 @@ export const Search: FC<ISearch> = React.memo((
                     localStorage.removeItem("token")
                     navigate("/")
                 }
-                    
                 if (res.body.tracks == undefined){
                     return
                 }
@@ -47,7 +42,6 @@ export const Search: FC<ISearch> = React.memo((
                             },
                            
                         )
-
                         return {
                             artist: track.artists[0].name,
                             title: track.name,
@@ -58,9 +52,6 @@ export const Search: FC<ISearch> = React.memo((
                 )
             })
         }
-     
-
-        
     }, [search])
     
     return (

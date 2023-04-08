@@ -18,7 +18,7 @@ public class SongResponse : IBaseResponse<Song>
         var baseResponse = new BaseResponse<Song>();
         try
         {
-            var song = await _baseRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+            var song = await _baseRepository.GetAll().Result.FirstOrDefaultAsync(x => x.Id == id);
             if (song == null)
             {
                 baseResponse.Description = "not found by id";
@@ -70,7 +70,7 @@ public class SongResponse : IBaseResponse<Song>
         var baseResponse = new BaseResponse<bool>();
         try
         {
-            var getSong = await _baseRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+            var getSong = await _baseRepository.GetAll().Result.FirstOrDefaultAsync(x => x.Id == id);
             if (getSong == null)
             {
                 baseResponse.Description = "not found by id to delete";
@@ -98,7 +98,7 @@ public class SongResponse : IBaseResponse<Song>
         var baseResponse = new BaseResponse<Song>();
         try
         {
-            var getSong = await _baseRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+            var getSong = await _baseRepository.GetAll().Result.FirstOrDefaultAsync(x => x.Id == id);
             if (getSong == null)
             {
                 baseResponse.Description = "not found by id to edit";
@@ -128,7 +128,7 @@ public class SongResponse : IBaseResponse<Song>
         var baseResponse = new BaseResponse<IEnumerable<Song>>();
         try
         {
-            var songs = await _baseRepository.GetAll().ToListAsync();
+            var songs = await _baseRepository.GetAll().Result.ToListAsync();
             if (songs == null)
             {
                 baseResponse.Description = "list is null";
@@ -154,7 +154,7 @@ public class SongResponse : IBaseResponse<Song>
         var baseResponse = new BaseResponse<Song>();
         try
         {
-            var song = await _baseRepository.GetAll().FirstOrDefaultAsync(x => x.SongName == name);
+            var song = await _baseRepository.GetAll().Result.FirstOrDefaultAsync(x => x.SongName == name);
             if (song == null)
             {
                 baseResponse.Description = "not found by name";
