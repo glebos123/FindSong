@@ -4,6 +4,7 @@ using FindSong.DAL;
 using FindSong.DAL.Interfaces;
 using FindSong.DAL.Repository;
 using FindSong.Domain;
+using FindSong.GraphQL;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,10 +16,11 @@ builder.Services.AddScoped<IBaseResponse<Song>, SongResponse>();
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
     option.UseNpgsql("Host=localhost;Port=5432;Database=FindSongDb;Username=postgres;Password=denis_sabaka_denis"));
 
-
+builder.Services.AddGraphQLServer()
+    .AddQueryType<Queries>()
+    .AddMutationType<Mutations>();
 
 var app = builder.Build();
-
-app.MapGet("/", () => "Hello World!");
-
+app.UseRouting();
+app.MapGraphQL();
 app.Run();

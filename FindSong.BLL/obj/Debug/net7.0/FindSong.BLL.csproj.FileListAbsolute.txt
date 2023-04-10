@@ -1,0 +1,17 @@
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\bin\Debug\net7.0\FindSong.BLL.deps.json
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\bin\Debug\net7.0\FindSong.BLL.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\bin\Debug\net7.0\FindSong.BLL.pdb
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\bin\Debug\net7.0\FindSong.DAL.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\bin\Debug\net7.0\FindSong.Domain.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\bin\Debug\net7.0\FindSong.DAL.pdb
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\bin\Debug\net7.0\FindSong.Domain.pdb
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.csproj.AssemblyReference.cache
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.AssemblyInfoInputs.cache
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.AssemblyInfo.cs
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.csproj.CopyComplete
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\refint\FindSong.BLL.dll
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\FindSong.BLL.pdb
+C:\Users\Gleb\RiderProjects\FindSong\FindSong.BLL\obj\Debug\net7.0\ref\FindSong.BLL.dll
