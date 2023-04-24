@@ -39,7 +39,6 @@ export const CreateSong: FC<ISong> = React.memo((
     }, [songName])
     
     
-    
     const onCreateSong = () => {
         createSong({
             variables: {
