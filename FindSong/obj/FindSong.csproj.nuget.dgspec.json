@@ -259,6 +259,10 @@
               "target": "Package",
               "version": "[14.0.0-preview.10.7, )"
             },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0-preview.2.23128.3, )"

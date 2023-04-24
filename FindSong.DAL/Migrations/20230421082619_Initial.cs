@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -15,11 +15,12 @@ namespace FindSong.DAL.Migrations
                 name: "Songs",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
                     SongName = table.Column<string>(type: "text", nullable: false),
-                    Mood = table.Column<string>(type: "text", nullable: false),
-                    Speed = table.Column<string>(type: "text", nullable: false)
+                    Mood = table.Column<int>(type: "integer", nullable: false),
+                    Speed = table.Column<int>(type: "integer", nullable: false),
+                    Vocal = table.Column<int>(type: "integer", nullable: false),
+                    Instrumental = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {

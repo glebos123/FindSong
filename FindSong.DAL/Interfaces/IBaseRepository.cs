@@ -2,7 +2,7 @@
 
 public interface IBaseRepository<T>
 {
-    Task<IQueryable<T>> GetAll();
+    Task<IEnumerable<T>> GetAll();
     Task<bool> Create(T entity);
     Task<bool> Delete(T entity);
     Task<T> Update(T entity);

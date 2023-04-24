@@ -1,0 +1,30 @@
+﻿mutation CreateSong($song: SongInput!){
+    createSong(song: $song){
+        description
+        statusCode
+        data
+    }
+}
+
+mutation DeleteSong($id: UUID!){
+    deleteSong(id: $id){
+        data
+        description
+        statusCode
+    }
+}
+
+mutation EditSong($id: UUID!, $song: SongInput!){
+    editSong(id: $id, song: $song){
+        data {
+            id
+            mood
+            songName
+            speed
+            instrumental
+            vocal
+        }
+        description
+        statusCode
+    }
+}

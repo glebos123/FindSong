@@ -1,4 +1,5 @@
 ﻿using FindSong.Domain;
+using FindSong.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace FindSong.DAL;

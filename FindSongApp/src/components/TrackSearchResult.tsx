@@ -1,5 +1,5 @@
 ﻿import React, {Dispatch, FC} from "react"
-import {Link} from "react-router-dom";
+import {Button} from "react-bootstrap";
 
 interface ITrackSearchResult{
     track: {
@@ -8,18 +8,20 @@ interface ITrackSearchResult{
         uri: string,
         albumUrl: string,
     },
-    setSong : Dispatch<string>
+    setSongName : Dispatch<string>
 }
 
 export const TrackSearchResult: FC<ITrackSearchResult> = React.memo((
     {
         track,
-        setSong
+        setSongName,
     }
 ) => {
+
     function toSong() {
-        setSong(track.title);
+        setSongName(track.title)
     }
+
     return (
         <div 
             className="d-flex justify-content-between m-2 align-items-center"
@@ -30,7 +32,9 @@ export const TrackSearchResult: FC<ITrackSearchResult> = React.memo((
                 <div>{track.title}</div>
                 <div className="text-muted">{track.artist}</div>
             </div>
-            <Link onClick={toSong} to={"/Song"}>выбрать</Link>
+            <Button onClick={() =>
+            {   toSong();
+            }}>выбрать</Button>
         </div>
     )
 })

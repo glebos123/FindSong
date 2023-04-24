@@ -1,28 +1,39 @@
 ﻿import React, {useState, useEffect, FC, Dispatch} from "react"
-import { Container, Form } from "react-bootstrap"
+import {Button, Container, Form} from "react-bootstrap"
 import SpotifyWebApi from "spotify-web-api-node"
 import {TrackSearchResult} from "./TrackSearchResult";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const spotifyApi = new SpotifyWebApi({
     clientId: "5a87b8656f2a470bb12590d2c59fea05",
 })
 interface ISearch{
-    setSong : Dispatch<string>
+    songName: string
+    setSongName : Dispatch<string>
 }
 
 export const Search: FC<ISearch> = React.memo((
     {
-         setSong
+        songName,
+        setSongName
     }
     
 ) => {
     const [search, setSearch] = useState("")
     const [searchResults, setSearchResults] = useState<Array<any>>([])
     const navigate = useNavigate()
+    const location = useLocation();
+    
+    function navigateToAllSongs(){
+        navigate('/AllSongs')
+    }
     
     useEffect(() => {
 
+        if (location.pathname == "/Search"){
+            setSongName('');
+        }
+        
         let token = localStorage.getItem("token")
         if (token !== null && search !== ""){
             spotifyApi.setAccessToken(token)
@@ -52,10 +63,14 @@ export const Search: FC<ISearch> = React.memo((
                 )
             })
         }
-    }, [search])
+    }, [search, location])
     
     return (
+        
         <Container className="d-flex flex-column py-2" style={{ height: "100vh" }}>
+            <Button onClick={navigateToAllSongs} >
+                Показать созданные песни
+            </Button>
             <Form.Control
                 type="search"
                 placeholder="Search Songs"
@@ -65,7 +80,7 @@ export const Search: FC<ISearch> = React.memo((
             <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
                 {searchResults.map(track => (
                     <TrackSearchResult
-                        setSong={setSong}
+                        setSongName={setSongName}
                         track={track}
                         key={track.uri}
                     />

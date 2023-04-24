@@ -1,6 +1,7 @@
 ﻿using FindSong.BLL.Interfaces;
 using FindSong.DAL.Interfaces;
 using FindSong.Domain;
+using FindSong.Domain.Entity;
 using FindSong.Domain.Enums;
 using FindSong.Domain.Response;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +14,7 @@ public class SongResponse : IBaseResponse<Song>
     public SongResponse(IBaseRepository<Song> baseRepository) => _baseRepository = baseRepository;
 
 
-    public async Task<BaseResponse<Song>> GetSong(int id)
+    public async Task<BaseResponse<Song>> GetSong(Guid id)
     {
         var baseResponse = new BaseResponse<Song>();
         try
@@ -46,8 +47,11 @@ public class SongResponse : IBaseResponse<Song>
         {
             var song = new Song
             {
+                Id = entity.Id,
                 SongName = entity.SongName,
                 Mood = entity.Mood,
+                Vocal = entity.Vocal,
+                Instrumental = entity.Instrumental,
                 Speed = entity.Speed
             };
             await _baseRepository.Create(song);
@@ -65,7 +69,7 @@ public class SongResponse : IBaseResponse<Song>
         }
     }
 
-    public async Task<BaseResponse<bool>> DeleteSong(int id)
+    public async Task<BaseResponse<bool>> DeleteSong(Guid id)
     {
         var baseResponse = new BaseResponse<bool>();
         try
@@ -93,7 +97,7 @@ public class SongResponse : IBaseResponse<Song>
         }
     }
 
-    public async Task<BaseResponse<Song>> EditSong(int id, Song entity)
+    public async Task<BaseResponse<Song>> EditSong(Guid id, Song entity)
     {
         var baseResponse = new BaseResponse<Song>();
         try
@@ -108,6 +112,8 @@ public class SongResponse : IBaseResponse<Song>
             getSong.SongName = entity.SongName;
             getSong.Mood = entity.Mood;
             getSong.Speed = entity.Speed;
+            getSong.Vocal = entity.Vocal;
+            getSong.Instrumental = entity.Instrumental;
             await _baseRepository.Update(entity);
             baseResponse.Data = getSong;
             baseResponse.StatusCode = StatusCode.OK;
@@ -170,6 +176,35 @@ public class SongResponse : IBaseResponse<Song>
             return new BaseResponse<Song>()
             {
                 Description = $"[GetSongByName] : {e.Message}",
+                StatusCode = StatusCode.InternalServerError
+            };
+        }
+    }
+    
+    public async Task<BaseResponse<IEnumerable<Song>>> GetSimilarSong(string name, Mood mood, Instrumental instrumental, Vocal vocal, Speed speed)
+    {
+        var baseResponse = new BaseResponse<IEnumerable<Song>>();
+        try
+        {
+            var song = (await _baseRepository.GetAll()).Where(s =>
+                    s.Mood == mood && s.Speed == speed && s.Vocal == vocal && s.Instrumental == instrumental && s.SongName != name)
+                .ToArray();;
+            if (song.Length == 0 )
+            {
+                baseResponse.Description = "not similar song";
+                baseResponse.StatusCode = StatusCode.InternalServerError;
+                return baseResponse;
+            }
+
+            baseResponse.Data = song;
+            baseResponse.StatusCode = StatusCode.OK;
+            return baseResponse;
+        }
+        catch (Exception e)
+        {
+            return new BaseResponse<IEnumerable<Song>>()
+            {
+                Description = $"[GetSimilarSong] : {e.Message}",
                 StatusCode = StatusCode.InternalServerError
             };
         }

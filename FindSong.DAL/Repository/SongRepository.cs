@@ -1,5 +1,6 @@
 ﻿using FindSong.DAL.Interfaces;
 using FindSong.Domain;
+using FindSong.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace FindSong.DAL.Repository;
@@ -9,7 +10,7 @@ public class SongRepository : IBaseRepository<Song>
     private readonly ApplicationDbContext _db;
     public SongRepository(ApplicationDbContext db) => _db = db;
 
-    public async Task<IQueryable<Song>> GetAll()
+    public async Task<IEnumerable<Song>> GetAll()
     {
         return (await _db.Songs.ToArrayAsync()).AsQueryable();
     }

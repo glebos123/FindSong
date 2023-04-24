@@ -1,0 +1,59 @@
+﻿query GetSong($id: UUID!){
+    song(id: $id){
+        description
+        statusCode
+        data {
+            id
+            songName
+            speed
+            mood
+            instrumental
+            vocal
+        }
+    }
+}
+
+query GetSongByName($name: String!){
+    byName(name: $name){
+        description
+        statusCode
+        data {
+            id
+            songName
+            speed
+            mood
+            instrumental
+            vocal
+        }
+    }
+}
+
+query GetSongs{
+    songs{
+        description
+        statusCode
+        data {
+            id
+            songName
+            speed
+            mood
+            instrumental
+            vocal
+        }
+    }
+}
+
+query GetSimilarSong($name: String!, $mood: Mood!, $instrumental: Instrumental!, $vocal: Vocal!, $speed: Speed!){
+    similar(name: $name, mood: $mood, instrumental: $instrumental, vocal: $vocal, speed: $speed){
+        description
+        statusCode
+        data {
+            id
+            songName
+            speed
+            mood
+            instrumental
+            vocal
+        }
+    }
+}
